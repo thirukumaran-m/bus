@@ -1,0 +1,17 @@
+body{
+font-family:Arial;
+margin:0;
+padding:0;
+text-align:center;
+}
+
+#map{
+height:80vh;
+width:100%;
+}
+
+#etaBox{
+background:#fff;
+padding:10px;
+font-size:18px;
+}

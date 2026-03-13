@@ -1,0 +1,64 @@
+
+body{
+margin:0;
+font-family:Arial;
+background:#f4f4f4;
+}
+
+/* Navbar */
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#007bff;
+padding:12px 20px;
+color:white;
+}
+
+.logo{
+font-size:20px;
+font-weight:bold;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-size:16px;
+}
+
+.nav-links a:hover{
+text-decoration:underline;
+}
+
+/* Content */
+.container{
+padding:20px;
+}
+
+.bus-list{
+background:white;
+padding:15px;
+border-radius:8px;
+box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+.bus-list a{
+display:block;
+padding:10px;
+border-bottom:1px solid #eee;
+text-decoration:none;
+color:black;
+}
+
+.bus-list a:hover{
+background:#f1f1f1;
+}
+#busList{
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    margin-left: 50%;
+    height: 100%;
+    width: 300px;
+}

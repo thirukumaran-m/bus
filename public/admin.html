@@ -2,19 +2,57 @@
 <html>
 <head>
 
-<title>Transport Admin</title>
-
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="admin.css">
 <script src="/socket.io/socket.io.js"></script>
 
 </head>
 
 <body>
 
-<h2>Admin Bus Monitor</h2>
 
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+
+<div class="logo">
+🚌 Transport Admin
+</div>
+
+<div class="nav-links">
+<a href="admin.html">Dashboard</a>
+<a href="index.html">Passenger Map</a>
+<a href="driver.html">Driver Page</a>
+<a href="login.html">Logout</a>
+</div>
+
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+
+<h2>Bus List</h2>
+
+<div class="bus-list">
 <div id="busList"></div>
+<a href="index.html?bus=Bus1">🚌 Bus1</a>
+<a href="index.html?bus=Bus2">🚌 Bus2</a>
+<a href="index.html?bus=Bus3">🚌 Bus3</a>
+<a href="index.html?bus=Bus4">🚌 Bus4</a>
+<a href="index.html?bus=Bus5">🚌 Bus5</a>
+
+</div>
+
+</div>
+
+
 
 <script src="admin.js"></script>
 
 </body>
+
 </html>

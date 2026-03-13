@@ -1,7 +1,7 @@
-//const socket = io();
+const socket = io();
 
-//let map;
-//let busMarkers = {};
+let map;
+let busMarkers = {};
 function initMap(){
 
 map = new google.maps.Map(document.getElementById("map"),{

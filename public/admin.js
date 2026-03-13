@@ -15,8 +15,8 @@ document.getElementById("busList").innerHTML=html;
 });
 //arrived status
 const collegeLocation = {
-  lat: 8.7642,
-  lng: 78.1348
+  lat: 8.683256,
+  lng: 78.028912
 };
 socket.on("busLocation", (data) => {
 

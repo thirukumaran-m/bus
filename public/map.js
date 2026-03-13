@@ -1,29 +1,7 @@
-const socket = io();
+//const socket = io();
 
-let map;
-let busMarkers = {};
-
-const stops = [
-{lat:8.8922,lng:78.1707,name:"Tharuvaikulam"},
-{lat:8.7929,lng:78.1424,name:"Samathuvapuram"},
-{lat:8.7929,lng:78.1424,name:"Komeshpuram"},
-{lat:8.824,lng:78.165,name:"Thalamuthunagar"},
-{lat:8.8167,lng:78.1333,name:"T.Saveriyarpuram"},
-{lat:8.8300,lng:78.1445,name:"Sottayanthoppu"},
-{lat:8.7929,lng:78.1424,name:"Arokyapuram"},
-{lat:8.8191,lng:78.1480,name:"Vattakovil"},
-{lat:8.8140,lng:78.1469,name:"American Hospital"},
-{lat:8.8346,lng:78.1411,name:"Karupatti Society"},
-{lat:8.8157,lng:78.1479,name:"Kandasamypuram"},
-{lat:8.8044,lng:78.1406,name:"Old Bus Stand"},
-{lat:8.7517,lng:78.1289,name:"Bolden Puram"},
-{lat:8.7902,lng:78.1322,name:"Bryant Nagar"},
-{lat:8.8012,lng:78.1211,name:"Millerpuram"},
-{lat:8.7906,lng:78.1155,name:"3rd Mile"},
-{lat:8.7375,lng:78.0370,name:"College"},
-
-];
-
+//let map;
+//let busMarkers = {};
 function initMap(){
 
 map = new google.maps.Map(document.getElementById("map"),{

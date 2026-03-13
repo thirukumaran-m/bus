@@ -4,7 +4,7 @@ let map;
 let busMarkers = {};
 const stops = [
 {lat:8.8922,lng:78.1707,name:"Tharuvaikulam"},
-{lat:8.683256,lng:78.028912,name:"College"}
+{lat:8.690087,lng:78.03434,name:"College"}
 
 ];
 function initMap(){

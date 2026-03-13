@@ -2,6 +2,11 @@ const socket = io();
 
 let map;
 let busMarkers = {};
+const stops = [
+{lat:8.8922,lng:78.1707,name:"Tharuvaikulam"},
+{lat:8.7375,lng:78.0370,name:"College"},
+
+];
 function initMap(){
 
 map = new google.maps.Map(document.getElementById("map"),{
@@ -18,13 +23,13 @@ icon:"http://maps.google.com/mapfiles/ms/icons/green-dot.png"
 });
 });
 
-const route = new google.maps.Polyline({
-path:stops,
-geodesic:true,
-strokeColor:"#FF0000",
-strokeOpacity:1.0,
-strokeWeight:4
-});
+//const route = new google.maps.Polyline({
+//path:stops,
+//geodesic:true,
+//strokeColor:"#FF0000",
+//strokeOpacity:1.0,
+//strokeWeight:4
+//});
 
 route.setMap(map);
 

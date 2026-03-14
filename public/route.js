@@ -2,11 +2,11 @@ const socket = io();
 
 const stops = [
 
-{name:"Stop 1",lat:8.7642,lng:78.1348},
-{name:"Stop 2",lat:8.7660,lng:78.1360},
-{name:"Stop 3",lat:8.7680,lng:78.1380},
-{name:"Stop 4",lat:8.7700,lng:78.1400},
-{name:"Stop 5",lat:8.7720,lng:78.1420}
+{name:"Stop 1",lat:8.786982,lng:438.133763},
+{name:"Stop 2",lat:8.787724,lng:438.130821},
+{name:"Stop 3",lat:8.789783,lng:438.130918},
+{name:"Stop 4",lat:8.793298,lng:438.130979},
+{name:"Stop 5",lat:8.793356,lng:438.135546}
 
 ];
 

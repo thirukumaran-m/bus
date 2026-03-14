@@ -39,11 +39,12 @@ function checkCollegeReached(busLat, busLng){
   }
 
 }
-let lastUpdateTime = Date.now();
+
+let lastLocationTime = Date.now();
 
 socket.on("busLocation",(data)=>{
 
-  lastUpdateTime = Date.now();   // update time when GPS arrives
+  lastLocationTime = Date.now();   // update time when GPS arrives
 
   document.getElementById("busStatus").innerText =
   data.busId + " On the Way";

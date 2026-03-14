@@ -16,12 +16,10 @@ lng:lng
 });
 navigator.geolocation.watchPosition((position)=>{
 
-  const lat = position.coords.latitude;
-  const lng = position.coords.longitude;
-
   socket.emit("busLocation",{
-    lat:lat,
-    lng:lng
+
+    lat : position.coords.latitude,
+    lng : position.coords.longitude
   });
 
 });

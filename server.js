@@ -11,6 +11,8 @@ io.on("connection",(socket)=>{
 
 socket.on("busLocation",(data)=>{
 
+io.emit("busLocation",data);
+
 buses[data.busId] = {
 lat:data.lat,
 lng:data.lng

@@ -3,6 +3,7 @@
 <head>
 
 <title>Admin Dashboard</title>
+<link rel="icon" href="WhatsApp Image 2026-03-14 at 10.12.47 PM.jpeg">
 <link rel="stylesheet" href="admin.css">
 <script src="/socket.io/socket.io.js"></script>
 
@@ -24,13 +25,18 @@
 </div>
 
 <div class="nav-links">
+    
 <a href="admin.html">Dashboard</a>
 <a href="route.html">Route</a>
 <a href="index.html">Passenger Map</a>
 <a href="driver.html">Driver Page</a>
 <a href="login.html">Logout</a>
-</div>
 
+
+</div>
+<div class="menu-icon">
+<i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+</div>
 </div>
 
 <!-- CONTENT -->
@@ -49,8 +55,21 @@
 </div>
 
 </div>
+<script>
+    function toggleMenu(){
+let menu = document.querySelector(".nav-links");
+let logo = document.querySelector(".logo");
 
-
+if(menu.style.display === "flex"){
+menu.style.display = "none";
+logo.style.display = "block";
+}else{
+menu.style.display = "flex";
+logo.style.display = "none";
+}
+}
+</script>
+<script src="https://kit.fontawesome.com/f8e1a90484.js" crossorigin="anonymous"></script>
 
 <script src="admin.js"></script>
 

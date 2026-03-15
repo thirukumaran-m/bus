@@ -4,7 +4,7 @@ background:#0f172a;
 color:white;
 margin:0;
 padding:20px;
-background-image: url('WhatsApp\ Image\ 2026-03-13\ at\ 5.59.21\ AM.jpeg');
+background-image: url('WhatsApp\ Image\ 2026-03-13\ at\ 5.59.21\ AM\ \(1).jpeg');
 background-attachment: fixed;
 background-repeat: no-repeat;
 background-size: 100% 100%;
@@ -78,4 +78,117 @@ background:#38bdf8;
 color:white;
 border-radius:5px;
 cursor:pointer;
+}
+/* ===============================
+   TABLET (max-width: 992px)
+================================*/
+@media (max-width:992px){
+
+.timeline{
+margin:20px;
+padding-left:60px;
+}
+
+.timeline::before{
+left:30px;
+}
+
+.box{
+width:260px;
+}
+
+h2{
+margin-left:10px;
+}
+
+}
+
+
+/* ===============================
+   MOBILE (max-width: 768px)
+================================*/
+@media (max-width:768px){
+
+body{
+padding:10px;
+background-size:cover;
+}
+
+.timeline{
+margin:10px;
+padding-left:50px;
+}
+
+.timeline::before{
+left:25px;
+}
+
+.stop{
+margin-bottom:30px;
+}
+
+.time{
+width:60px;
+font-size:12px;
+}
+
+.circle{
+width:12px;
+height:12px;
+margin-right:10px;
+}
+
+.box{
+width:90%;
+padding:15px;
+}
+
+button{
+width:100%;
+padding:12px;
+}
+
+h2{
+font-size:20px;
+margin-left:5px;
+}
+
+}
+
+
+/* ===============================
+   SMALL MOBILE (max-width:480px)
+================================*/
+@media (max-width:480px){
+
+.timeline{
+padding-left:40px;
+}
+
+.timeline::before{
+left:20px;
+}
+
+.time{
+font-size:11px;
+}
+
+.circle{
+width:10px;
+height:10px;
+}
+
+.box{
+width:95%;
+padding:12px;
+}
+
+h2{
+font-size:18px;
+}
+
+button{
+font-size:14px;
+}
+
 }

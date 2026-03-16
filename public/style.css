@@ -19,3 +19,9 @@ background:#fff;
 padding:10px;
 font-size:18px;
 }
+@media (max-width:768px){
+    body{
+    background-size: cover;
+    background-position: center;
+    }
+}

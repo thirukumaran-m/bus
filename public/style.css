@@ -1,27 +1,27 @@
-body{
-font-family:Arial;
-margin:0;
-padding:0;
-text-align:center;
-background-image: url("WhatsApp\ Image\ 2026-03-13\ at\ 5.40.42\ AM.jpeg");
-background-attachment: fixed;
-background-repeat: no-repeat;
-background-size: 100% 100%;
+body {
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-image: url("WhatsApp\ Image\ 2026-03-13\ at\ 5.40.42\ AM.jpeg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
-#map{
-height:80vh;
-width:100%;
+#map {
+  height: 80vh;
+  width: 100%;
 }
 
-#etaBox{
-background:#fff;
-padding:10px;
-font-size:18px;
+#etaBox {
+  background: #fff;
+  padding: 10px;
+  font-size: 18px;
 }
-@media (max-width:768px){
-    body{
+@media (max-width: 768px) {
+  body {
     background-size: cover;
     background-position: center;
-    }
+  }
 }

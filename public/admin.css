@@ -1,175 +1,168 @@
-
-body{
-margin:0;
-font-family:Arial;
-background:#f4f4f4;
-background-image: url('WhatsApp\ Image\ 2026-03-13\ at\ 5.59.21\ AM.jpeg');
-background-attachment: fixed;
-background-repeat: no-repeat;
-background-size: 100% 100%;
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #f4f4f4;
+  background-image: url("WhatsApp\ Image\ 2026-03-13\ at\ 5.59.21\ AM.jpeg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 /* Navbar */
-.navbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:#007bff;
-padding:12px 20px;
-color:white;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #007bff;
+  padding: 12px 20px;
+  color: white;
 }
 
-.logo{
-font-size:20px;
-font-weight:bold;
+.logo {
+  font-size: 20px;
+  font-weight: bold;
 }
 
-.nav-links a{
-color:white;
-text-decoration:none;
-margin-left:20px;
-font-size:16px;
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 16px;
 }
 
-.nav-links a:hover{
-text-decoration:underline;
+.nav-links a:hover {
+  text-decoration: underline;
 }
 
 /* Content */
-.container{
-padding:20px;
+.container {
+  padding: 20px;
 }
 
-.bus-list{
-background:white;
-padding:15px;
-border-radius:8px;
-box-shadow:0 2px 5px rgba(0,0,0,0.1);
+.bus-list {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.bus-list a{
-display:block;
-padding:10px;
-border-bottom:1px solid #eee;
-text-decoration:none;
-color:black;
+.bus-list a {
+  display: block;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  text-decoration: none;
+  color: black;
 }
 
-.bus-list a:hover{
-background:#f1f1f1;
+.bus-list a:hover {
+  background: #f1f1f1;
 }
-#busList{
-    display: flex;
-    font-family: 'Times New Roman', Times, serif;
-    position: relative;
-    margin-left: 50%;
-    height: 100%;
-    width: 300px;
+#busList {
+  display: flex;
+  font-family: "Times New Roman", Times, serif;
+  position: relative;
+  margin-left: 50%;
+  height: 100%;
+  width: 300px;
 }
-.menu-icon{
-    display: none;
+.menu-icon {
+  display: none;
 }
-.menu-icon i{
-color: #fff;
-font-size: 30px;
-cursor: pointer;
+.menu-icon i {
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
 }
-@media (max-width:992px){
+@media (max-width: 992px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-.navbar{
-flex-direction:column;
-align-items:flex-start;
-}
+  .nav-links {
+    margin-top: 10px;
+  }
 
-.nav-links{
-margin-top:10px;
-}
+  .nav-links a {
+    margin-left: 0;
+    margin-right: 15px;
+  }
 
-.nav-links a{
-margin-left:0;
-margin-right:15px;
-}
+  .container {
+    padding: 15px;
+  }
 
-.container{
-padding:15px;
-}
-
-.bus-list{
-width:100%;
-}
-
+  .bus-list {
+    width: 100%;
+  }
 }
 
 /* ===============================
    MOBILE SCREEN (max 768px)
 ================================*/
-@media (max-width:768px){
-body{
+@media (max-width: 768px) {
+  body {
     background-size: cover;
     background-position: center;
-}
-.navbar{
-flex-direction:row;
-justify-content:space-between;
-}
+  }
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
-.menu-icon{
-display:block;
-}
+  .menu-icon {
+    display: block;
+  }
 
-.nav-links{
-display:none;
-flex-direction:column;
-width:100%;
-background:#007bff;
-margin-top:10px;
-}
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #007bff;
+    margin-top: 10px;
+  }
 
-.nav-links a{
-padding:10px;
-border-top:1px solid rgba(255,255,255,0.3);
-margin:0;
-}
+  .nav-links a {
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 0;
+  }
 
-.container{
-padding:10px;
-}
+  .container {
+    padding: 10px;
+  }
 
-.bus-list{
-width:100%;
-padding:10px;
-}
+  .bus-list {
+    width: 100%;
+    padding: 10px;
+  }
 
-.bus-list a{
-font-size:14px;
-}
-
+  .bus-list a {
+    font-size: 14px;
+  }
 }
 
 /* ===============================
    SMALL MOBILE (max 480px)
 ================================*/
-@media (max-width:480px){
+@media (max-width: 480px) {
+  .logo {
+    font-size: 16px;
+  }
 
-.logo{
-font-size:16px;
+  .nav-links a {
+    font-size: 14px;
+  }
 
-}
+  .container h2 {
+    font-size: 18px;
+  }
 
-.nav-links a{
-font-size:14px;
-}
+  .bus-list {
+    padding: 8px;
+  }
 
-.container h2{
-font-size:18px;
-}
-
-.bus-list{
-padding:8px;
-}
-
-.bus-list a{
-padding:8px;
-}
-
+  .bus-list a {
+    padding: 8px;
+  }
 }

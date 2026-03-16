@@ -1,27 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Driver GPS</title>
-<link rel="icon" href="WhatsApp Image 2026-03-14 at 10.12.47 PM.jpeg">
-<link rel="stylesheet" href="style.css">
-<script src="/socket.io/socket.io.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Driver GPS</title>
+    <link rel="icon" href="WhatsApp Image 2026-03-14 at 10.12.47 PM.jpeg" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
 
-</head>
+  <body>
+    <h2>Driver GPS Sender</h2>
+    <div class="box">
+      <p>Status:<span id="status">Waiting</span></p>
+      <p>Latitude<span id="lat">--</span></p>
+      <p>Longitude<span id="lng">--</span></p>
 
-<body>
+      <button onclick="startTracking()">start Sending Location</button>
+    </div>
 
-<h2>Driver GPS Sender</h2>
-<div class="box">
-<p>Status:<span id="status">Waiting</span></p>
-<p>Latitude<span id="lat">--</span></p>
-<p>Longitude<span id="lng">--</span></p>
-
-<button onclick="startTracking()">start Sending Location</button>
-</div>
-
-<script src="driver.js"></script>
-
-</body>
+    <script src="driver.js"></script>
+  </body>
 </html>

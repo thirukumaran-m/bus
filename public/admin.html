@@ -1,79 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Admin Dashboard</title>
-<link rel="icon" href="WhatsApp Image 2026-03-14 at 10.12.47 PM.jpeg">
-<link rel="stylesheet" href="admin.css">
-<script src="/socket.io/socket.io.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="icon" href="WhatsApp Image 2026-03-14 at 10.12.47 PM.jpeg" />
+    <link rel="stylesheet" href="admin.css" />
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <div class="logo">🚌 Transport Admin</div>
+      <div class="menu-icon">
+        <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+      </div>
+      <div class="nav-links">
+        <a href="admin.html">Dashboard</a>
+        <a href="route.html">Route</a>
+        <a href="index.html">Passenger Map</a>
+        <a href="driver.html">Driver Page</a>
+        <a href="login.html">Logout</a>
+      </div>
+    </div>
 
-</head>
+    <!-- CONTENT -->
+    <div class="container">
+      <h2>Bus List</h2>
 
-<body>
-
-
-
-</head>
-
-<body>
-
-<!-- NAVBAR -->
-<div class="navbar">
-
-<div class="logo">
-🚌 Transport Admin
-</div>
-
-<div class="nav-links">
-    
-<a href="admin.html">Dashboard</a>
-<a href="route.html">Route</a>
-<a href="index.html">Passenger Map</a>
-<a href="driver.html">Driver Page</a>
-<a href="login.html">Logout</a>
-
-
-</div>
-<div class="menu-icon">
-<i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
-</div>
-</div>
-
-<!-- CONTENT -->
-<div class="container">
-
-<h2>Bus List</h2>
-
-<div class="bus-list">
-<!--<div id="busList"></div>-->
-<a href="route.html">🚌 Bus1</a><h2 id="busStatus">Bus Status: Stopped</h2>
-<!--<a href="index.html?bus=Bus2">🚌 Bus2</a>
+      <div class="bus-list">
+        <!--<div id="busList"></div>-->
+        <a href="route.html">🚌 Bus1</a>
+        <h2 id="busStatus">Bus Status: Stopped</h2>
+        <!--<a href="index.html?bus=Bus2">🚌 Bus2</a>
 <a href="index.html?bus=Bus3">🚌 Bus3</a>
 <a href="index.html?bus=Bus4">🚌 Bus4</a>
 <a href="index.html?bus=Bus5">🚌 Bus5</a>-->
+      </div>
+    </div>
+    <script>
+      function toggleMenu() {
+        let menu = document.querySelector(".nav-links");
+        let logo = document.querySelector(".logo");
 
-</div>
+        if (menu.style.display === "flex") {
+          menu.style.display = "none";
+          logo.style.display = "block";
+        } else {
+          menu.style.display = "flex";
+          logo.style.display = "none";
+        }
+      }
+    </script>
+    <script
+      src="https://kit.fontawesome.com/f8e1a90484.js"
+      crossorigin="anonymous"
+    ></script>
 
-</div>
-<script>
-    function toggleMenu(){
-let menu = document.querySelector(".nav-links");
-let logo = document.querySelector(".logo");
-
-if(menu.style.display === "flex"){
-menu.style.display = "none";
-logo.style.display = "block";
-}else{
-menu.style.display = "flex";
-logo.style.display = "none";
-}
-}
-</script>
-<script src="https://kit.fontawesome.com/f8e1a90484.js" crossorigin="anonymous"></script>
-
-<script src="admin.js"></script>
-
-</body>
-
+    <script src="admin.js"></script>
+  </body>
 </html>

@@ -1,11 +1,11 @@
 const socket = io();
 
 const stops = [
-  { name: "Stop 1", lat: 8.786982, lng: 438.133763 },
-  { name: "Stop 2", lat: 8.787724, lng: 438.130821 },
-  { name: "Stop 3", lat: 8.789783, lng: 438.130918 },
-  { name: "Stop 4", lat: 8.793298, lng: 438.130979 },
-  { name: "Stop 5", lat: 8.793356, lng: 438.135546 },
+  { name: "Stop 1", lat: 8.786982, lng: 78.133763 },
+  { name: "Stop 2", lat: 8.787724, lng: 78.130821 },
+  { name: "Stop 3", lat: 8.789783, lng: 78.130918 },
+  { name: "Stop 4", lat: 8.793298, lng: 78.130979 },
+  { name: "Stop 5", lat: 8.793356, lng: 78.135546 },
 ];
 
 let arrivedStops = {};
@@ -20,19 +20,12 @@ stops.forEach((stop, i) => {
   div.className = "stop";
 
   div.innerHTML = `
-
 <div class="time" id="time${i}">--</div>
-
 <div class="circle"></div>
-
 <div>
-
 <h3>${stop.name}</h3>
-
 <p>Status : <span id="status${i}" class="waiting">Waiting</span></p>
-
 </div>
-
 `;
 
   timeline.appendChild(div);
@@ -42,6 +35,23 @@ stops.forEach((stop, i) => {
 
 socket.on("busLocation", (data) => {
   checkStops(data.lat, data.lng);
+});
+
+/* receive previous stop history */
+
+socket.on("stopHistory",(data)=>{
+
+Object.keys(data).forEach(i=>{
+
+arrivedStops[i] = true;
+
+document.getElementById("status"+i).innerText="Arrived";
+document.getElementById("status"+i).className="arrived";
+
+document.getElementById("time"+i).innerText=data[i];
+
+});
+
 });
 
 /* distance function */
@@ -71,6 +81,7 @@ function checkStops(busLat, busLng) {
     let distance = getDistance(busLat, busLng, stop.lat, stop.lng);
 
     if (distance < 0.1 && !arrivedStops[i]) {
+
       arrivedStops[i] = true;
 
       document.getElementById("status" + i).innerText = "Arrived";
@@ -79,6 +90,11 @@ function checkStops(busLat, busLng) {
       let time = new Date().toLocaleTimeString();
 
       document.getElementById("time" + i).innerText = time;
+
+      socket.emit("stopArrived",{
+        stop:i,
+        time:time
+      });
 
       /* next stop */
 

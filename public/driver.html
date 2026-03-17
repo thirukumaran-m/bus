@@ -10,7 +10,19 @@
   </head>
 
   <body>
-    <h2>Driver GPS Sender</h2>
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <div class="logo">🚌 Driver GPS Sender</div>
+      <div class="menu-icon">
+        <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+      </div>
+      <div class="nav-links">
+        <a href="admin.html">Dashboard</a>
+
+        <a href="login.html">Logout</a>
+      </div>
+    </div>
+
     <div class="box">
       <p>Status:<span id="status">Waiting</span></p>
       <p>Latitude<span id="lat">--</span></p>
@@ -18,6 +30,24 @@
 
       <button onclick="startTracking()">start Sending Location</button>
     </div>
+<script>
+      function toggleMenu() {
+        let menu = document.querySelector(".nav-links");
+        let logo = document.querySelector(".logo");
+
+        if (menu.style.display === "flex") {
+          menu.style.display = "none";
+          logo.style.display = "block";
+        } else {
+          menu.style.display = "flex";
+          logo.style.display = "none";
+        }
+      }
+    </script>
+    <script
+      src="https://kit.fontawesome.com/f8e1a90484.js"
+      crossorigin="anonymous"
+    ></script>
 
     <script src="driver.js"></script>
   </body>

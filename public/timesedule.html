@@ -50,6 +50,67 @@ color:white;
 tr:nth-child(even){
 background:#f2f2f2;
 }
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #007bff;
+  padding: 12px 20px;
+  color: white;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+.menu-icon {
+  display: none;
+}
+.menu-icon i {
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  body {
+    background-size: cover;
+    background-position: center;
+  }
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #007bff;
+    margin-top: 10px;
+  }
+
+  .nav-links a {
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 0;
+  }
+}
 
 /* MOBILE VIEW */
 @media (max-width:768px){
@@ -87,10 +148,21 @@ font-size:18px;
 </head>
 
 <body>
+    <div class="navbar">
+      <div class="logo">🚌 Thoothukudi College Bus Route</div>
+      <div class="menu-icon">
+        <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+      </div>
+      <div class="nav-links">
+        <a href="admin.html">Dashboard</a>
 
-<div class="header">
-Thoothukudi College Bus Route
-</div>
+        <a href="route.html">Route</a>
+        <a href="index.html">Passenger Map</a>
+
+        <a href="login.html">Logout</a>
+      </div>
+    </div>
+
 
 <div class="container">
 
@@ -123,6 +195,24 @@ Thoothukudi College Bus Route
 </table>
 
 </div>
+<script>
+      function toggleMenu() {
+        let menu = document.querySelector(".nav-links");
+        let logo = document.querySelector(".logo");
+
+        if (menu.style.display === "flex") {
+          menu.style.display = "none";
+          logo.style.display = "block";
+        } else {
+          menu.style.display = "flex";
+          logo.style.display = "none";
+        }
+      }
+    </script>
+    <script
+      src="https://kit.fontawesome.com/f8e1a90484.js"
+      crossorigin="anonymous"
+    ></script>
 
 </body>
 </html>
